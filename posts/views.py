@@ -51,7 +51,7 @@ class PostDeleteView(LoginRequiredMixin, DeleteView):
     model = Post
     success_url = reverse_lazy('posts:post_list')
 
-@login_required
+
 def post_list(request):
     f = PostFilter(request.GET, queryset=Post.objects.all())
     return render(request, 'posts/post_list.html',{'filter':f})
@@ -59,5 +59,5 @@ def post_list(request):
 
 
 
-class PostDetailView(LoginRequiredMixin, DetailView):
+class PostDetailView(DetailView):
     model = Post

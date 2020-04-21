@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
+{% block content %}
+
+  <div class="container">
+
+    <div class="contact_form">
+      <form method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button class="btn btn-secondary" type="submit">Contact</button>
+      </form>
+    </div>
+
+    <div class="contact_info">
+      <h1>{{church.church_name}}</h1>
+      <p>{{church.address.street_number}} {{church.address.route}}<br>
+         {{church.address.locality.name}}, {{church.address.locality.state.name}}, {{church.address.locality.postal_code}}<br>
+         {{church.email}}<br>
+         {{church.phone_number}}
+      </p>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

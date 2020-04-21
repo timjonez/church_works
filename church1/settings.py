@@ -21,13 +21,22 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'spdvy-o8frlceyvy3*tpv9!-wppafv2i=d3ju=ki529n0zl$9%'
-GOOGLE_API_KEY = 'get-your-own-google-maps-api-key'
+GOOGLE_API_KEY = 'your-google-maps-api-key'
+
+# Email Settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'your-email-relay'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'your-username'
+EMAIL_HOST_PASSWORD = 'your-password'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 AUTH_USER_MODEL = 'users.CustomUser'
 
 ALLOWED_HOSTS = []
+
 
 
 # Application definition

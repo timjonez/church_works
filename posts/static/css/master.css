@@ -199,3 +199,15 @@ html, body{
   box-shadow: 1px 1px 20px;
 }
 #contact_info:visited{color: black;}
+
+
+/* ################# New Project Page #################### */
+
+#form{
+  margin: auto;
+  margin-top: 5%;
+  padding: 30px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px;
+}

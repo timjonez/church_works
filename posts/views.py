@@ -53,7 +53,7 @@ class PostDeleteView(LoginRequiredMixin, DeleteView):
 
 
 def post_list(request):
-    f = PostFilter(request.GET, queryset=Post.objects.all())
+    f = PostFilter(request.GET, queryset=Post.objects.all().order_by('-created_date'))
     return render(request, 'posts/post_list.html',{'filter':f})
 
 
